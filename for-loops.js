@@ -1,3 +1,5 @@
+// Updated at bottom for some more practice w/ looping through object properties
+
 console.log("hello, first task: Increment By 10")
 for (var i = 5; i <= 120; i = i + 10) {
     console.log("the value of i is: " + i);
@@ -19,18 +21,28 @@ for (var i = 0; i <3; i++) {
 
 console.log("Object Iteration");
 var antSpecies = {
-  argentine: {},
-  army: {},
-  bigHeaded: {},
-  black: {},
-  bull: {},
-  carpenter: {},
-  crazy: {},
-  fire: {},
-  glider: {},
-  honeyPot: {},
-  jackJumper: {}
+  argentine: "antlers",
+  army: "antenna",
+  bigHeaded: "bigHeadThing",
+  black: "darkSpot",
+  bull: "horns",
+  carpenter: "tools",
+  crazy: "level10",
+  fire: "very hot",
+  glider: "can glide",
+  honeyPot: "sticky",
+  jackJumper: "can jump"
 }
-for (prop in antSpecies) {
-    console.log(prop, antSpecies[prop]);
+
+// For In loops, written as:  for ("property" in "object name")
+for (x in antSpecies) {
+    console.log("Key is: " + x, "    Value is: " + antSpecies[x]);
 }
+
+// Practicing referring to an object's property value.
+console.log(antSpecies.army);
+
+// Methods I found while looking at for loops (which may never be useful!)
+console.log("Methods I found while looking at for loops");
+// Alternative way to do this using Object.values method
+console.log(Object.keys(antSpecies), Object.values(antSpecies));
